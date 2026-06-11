@@ -1332,7 +1332,7 @@ let liveStandings = {};
 
 async function connectLiveData() {
   try {
-    const res = await fetch('https://api.football-data.org/v4/competitions/WC/matches', {
+    const res = await fetch('https://corsproxy.io/?https://api.football-data.org/v4/competitions/WC/matches', {
       headers: { 'X-Auth-Token': API_KEY }
     });
     if (!res.ok) { console.warn('API error:', res.status); return; }
